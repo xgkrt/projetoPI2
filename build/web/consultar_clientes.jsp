@@ -9,7 +9,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Consultar clientes</title>
     </head>
-    <body>
+    <body class="quadro">
         <%
             String nome;
             nome = request.getParameter("nome");
@@ -23,25 +23,25 @@
                 st.setString(1, "%" + nome + "%");
                 ResultSet resultado = st.executeQuery();
         %>
-                <table border="1">
-                            <tr>
-                                <th>Código</th><th>Nome</th><th>Telefone</th><th>Email</th>
-                            </tr>
+            <table border="1">
+                <tr>
+                    <th>Código</th><th>Nome</th><th>Telefone</th><th>Email</th>
+                </tr>
         <%
-                while (resultado.next()) {                        
+            while (resultado.next()) {                        
         %>
-                            <tr>
-                                <td><%= resultado.getString("id_clientes") %></td>
-                                <td><%= resultado.getString("nome") %></td>
-                                <td><%= resultado.getString("telefone") %></td>
-                                <td><%= resultado.getString("email") %></td>
-                                <td><a href="excluir_alunos.jsp?id_clientes=<%= resultado.getString("id_clientes") %>">Excluir</a></td>
-                                <td><a href="carrega_alunos.jsp?id_clientes=<%= resultado.getString("id_clientes") %>">Alterar</a></td>-
-                            </tr>
-        <%
+            <tr>
+                <td><%= resultado.getString("id_clientes") %></td>
+                <td><%= resultado.getString("nome") %></td>
+                <td><%= resultado.getString("telefone") %></td>
+                <td><%= resultado.getString("email") %></td>
+                <td><a href="excluir_alunos.jsp?id_clientes=<%= resultado.getString("id_clientes") %>">Excluir</a></td>
+                <td><a href="carrega_alunos.jsp?id_clientes=<%= resultado.getString("id_clientes") %>">Alterar</a></td>-
+            </tr>
+            <%
                 }
         %>
-                            </table>
+            </table>
         <%        
             } catch(Exception e){
                 out.print("Mensagem de erro: " + e.getMessage());

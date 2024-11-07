@@ -4,12 +4,14 @@
 <%@page import="java.sql.ResultSet" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Listar clientes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"/>
     </head>
-    <body>
+    <body class="quadro">
         <%
             try {
                 Connection conecta;
@@ -27,18 +29,18 @@
         <%
                 while (resultado.next()) {                        
         %>
-                            <tr>
-                                <td><%= resultado.getString("id_clientes") %></td>
-                                <td><%= resultado.getString("nome") %></td>
-                                <td><%= resultado.getString("telefone") %></td>
-                                <td><%= resultado.getString("email") %></td>
-                                <td><a href="clientes.jsp?id_clientes=<%= resultado.getString("id_clientes") %>">Excluir</a></td>
-                                <td><a href="carrega_alunos.jsp?id_clientes=<%= resultado.getString("id_clientes") %>">Alterar</a></td>
-                            </tr>
+            <tr>
+                <td><%= resultado.getString("id_clientes") %></td>
+                <td><%= resultado.getString("nome") %></td>
+                <td><%= resultado.getString("telefone") %></td>
+                <td><%= resultado.getString("email") %></td>
+                <td><a href="clientes.jsp?id_clientes=<%= resultado.getString("id_clientes") %>">Excluir</a></td>
+                <td><a href="carrega_alunos.jsp?id_clientes=<%= resultado.getString("id_clientes") %>">Alterar</a></td>
+            </tr>
         <%
                 }
         %>
-                            </table>
+            </table>
         <%        
             } catch(Exception e){
                 out.print("Mensagem de erro: " + e.getMessage());

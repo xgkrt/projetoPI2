@@ -4,12 +4,14 @@
 <%@page import="java.sql.ResultSet" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Excluir clintes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"/>
     </head>
-    <body>
+    <body class="quadro">
         <%
             int codigo;
             codigo = Integer.parseInt(request.getParameter("codigo"));
@@ -25,9 +27,9 @@
                 int resultado = st.executeUpdate();
 
                 if (resultado == 0) {
-                   out.print("<p>Este cliente não está cadastrado</p>");
+                   out.print("<p class='resposta'>Este cliente não está cadastrado</p>");
                 } else {
-                   out.print("<p>O cliente de codigo " + codigo + " foi excluído com sucesso.</p>");
+                   out.print("<pclass='resposta'>O cliente de codigo " + codigo + " foi excluído com sucesso.</p>");
                 }
             } catch (Exception e){
                 out.print("Mensagem de erro: " + e.getMessage());
