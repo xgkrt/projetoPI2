@@ -34,8 +34,8 @@
                 <td><%= resultado.getString("nome") %></td>
                 <td><%= resultado.getString("telefone") %></td>
                 <td><%= resultado.getString("email") %></td>
-                <td><a href="clientes.jsp?id_clientes=<%= resultado.getString("id_clientes") %>">Excluir</a></td>
-                <td><a href="carrega_alunos.jsp?id_clientes=<%= resultado.getString("id_clientes") %>">Alterar</a></td>
+                <td><a href="excluir_clientes.jsp?codigo=<%= resultado.getString("id_clientes") %>">Excluir</a></td>
+                <td><a href="carrega_clientes.jsp?codigo=<%= resultado.getString("id_clientes") %>">Alterar</a></td>
             </tr>
         <%
                 }

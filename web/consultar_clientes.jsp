@@ -25,7 +25,7 @@
         %>
             <table border="1">
                 <tr>
-                    <th>Código</th><th>Nome</th><th>Telefone</th><th>Email</th>
+                    <th>Código</th><th>Nome</th><th>Telefone</th><th>Email</th><th>Exclusão</th><th>Alteração</th>
                 </tr>
         <%
             while (resultado.next()) {                        
@@ -35,8 +35,8 @@
                 <td><%= resultado.getString("nome") %></td>
                 <td><%= resultado.getString("telefone") %></td>
                 <td><%= resultado.getString("email") %></td>
-                <td><a href="excluir_alunos.jsp?id_clientes=<%= resultado.getString("id_clientes") %>">Excluir</a></td>
-                <td><a href="carrega_alunos.jsp?id_clientes=<%= resultado.getString("id_clientes") %>">Alterar</a></td>-
+                <td><a href="excluir_clientes.jsp?codigo=<%= resultado.getString("id_clientes") %>">Excluir</a></td>
+                <td><a href="carrega_clientes.jsp?codigo=<%= resultado.getString("id_clientes") %>">Alterar</a></td>-
             </tr>
             <%
                 }

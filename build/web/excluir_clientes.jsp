@@ -13,8 +13,7 @@
     </head>
     <body class="quadro">
         <%
-            int codigo;
-            codigo = Integer.parseInt(request.getParameter("codigo"));
+            String codigo = request.getParameter("codigo");
             try {
                 Connection conecta;
                 PreparedStatement st;
@@ -22,7 +21,7 @@
                 conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/biblioteca", "root", "");
                 
                 st = conecta.prepareStatement("DELETE FROM clientes WHERE id_clientes=?");
-                st.setInt(1, codigo);
+                st.setString(1, codigo);
                 //Executa o comando Delete.
                 int resultado = st.executeUpdate();
 

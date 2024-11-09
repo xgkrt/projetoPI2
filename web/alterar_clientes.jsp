@@ -7,35 +7,36 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>alterar clientes</title>
+        <title>Alterar produtos</title>
     </head>
     <body>
         <%
             int codigo;
             String nome, telefone, email;
-
-            codigo = Integer.parseInt(request.getParameter("codigoCli"));
-            telefone = request.getParameter("telefoneCli");
-            nome = request.getParameter("nomeCli");
-            email = request.getParameter("emailCli");
+            codigo = Integer.parseInt(request.getParameter("codigo"));
+            nome = request.getParameter("nome");
+            telefone = request.getParameter("telefone");
+            email = request.getParameter("email");
             
             try {
                 Connection conecta;
                 PreparedStatement st;
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/biblioteca", "root", "");
-                
-                st = conecta.prepareStatement("UPDATE clientes SET nome=?, telefone=?, disciplina=?, nota=? WHERE matricula=?");
+
+                st = conecta.prepareStatement("UPDATE clientes SET nome=?, telefone=?, email=? WHERE id_clientes=?");
                 st.setString(1, nome);
-                st.setString(2, nome);
-                st.setString(3, telefone);
-                st.setString(4, email);
+                st.setString(2, telefone);
+                st.setString(3, email);
+                st.setInt(4, codigo);
                 st.executeUpdate();
                 
-                out.print("Os dados do aluno " + nome + " foram alterados com sucesso.");
-            } catch (Exception e) {
-                out.print("Erro: " + e.getMessage());
+                out.print("Os dados do cliente " + codigo + " foram alterados com sucesso." );
+
+            } catch (Exception x) {
+                out.print("<p class='mensagem'>Error: " + x.getMessage() + "<p>");
             }
+
         %>
     </body>
 </html>
