@@ -32,8 +32,8 @@
                 
                 resultado = st.executeQuery();
                 if(resultado.next()){
-                    abrir = true;
-                    //response.sendRedirect("restrito.jsp?nome=" + resultado.getString("nome"));
+                    //abrir = true;
+                    response.sendRedirect("restrito.jsp?nome=" + resultado.getString("nome"));
                 } else {
                     out.print("<p class='resposta'>Usuário e/ou senha inválidos</p>");
                 }
@@ -43,10 +43,10 @@
         %>
         
         <script>
-            var abr = <%= abrir%>;
-            if (abr){
-                window.open('restrito.jsp','_blank');
-            }
+//            var abr = <%= abrir%>;
+//            if (abr){
+//                window.open('restrito.jsp','_blank');
+//            }
         </script>
     </body>
 </html>
