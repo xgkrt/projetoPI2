@@ -27,8 +27,8 @@
         </header>
         <nav>
             <a href="../pagesClientes/clientes.html">Clientes</a>
-            <a href="livros.html" target="tela">Livros</a>
-            <a href="emprestimos.html" target="tela">Emprestimos</a>
+            <a href="../pagesLivros/livros.html">Livros</a>
+            <a href="emprestimos.html">Emprestimos</a>
         </nav>
         <main>
             <img id="img" src="https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="alt"/>

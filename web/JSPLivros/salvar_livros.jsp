@@ -7,18 +7,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Salvar clientes</title>
+        <title>Salvar livros</title>
         <link rel="stylesheet" href="../style.css"/>
     </head>
     <body>
         <%
             int codigo;
-            String nome, telefone, email;
+            String titulo, autor, genero;
 
-            codigo = Integer.parseInt(request.getParameter("codigoCli"));
-            telefone = request.getParameter("telefoneCli");
-            nome = request.getParameter("nomeCli");
-            email = request.getParameter("emailCli");
+            codigo = Integer.parseInt(request.getParameter("codigoli"));
+            titulo = request.getParameter("titulo");
+            autor = request.getParameter("autor");
+            genero = request.getParameter("genero");
             
             try {
                 Connection conecta;
@@ -26,18 +26,18 @@
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/biblioteca", "root", "");
 
-                st = conecta.prepareStatement("INSERT INTO clientes VALUES(?,?,?,?)");
+                st = conecta.prepareStatement("INSERT INTO livros VALUES(?,?,?,?)");
                 st.setInt(1, codigo);
-                st.setString(2, nome);
-                st.setString(3, telefone);
-                st.setString(4, email);
+                st.setString(2, titulo);
+                st.setString(3, autor);
+                st.setString(4, genero);
                 st.executeUpdate();
 
-                out.print("<p class='resposta'>Cliente cadastrado com sucesso</p>");
+                out.print("<p class='resposta'>Livro cadastrado com sucesso</p>");
             } catch (Exception x) {
                 String error = x.getMessage();
                 if (error.contains("Duplicate entry")) {
-                    out.print("<p class='resposta'>Este cliente já está cadastrado</p>");
+                    out.print("<p class='resposta'>Este livro já está cadastrado</p>");
                 } else {
                     out.print("<p class='resposta'>Mensagem de erro: " + x.getMessage() + "</p>");
                 }
