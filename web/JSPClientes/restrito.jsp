@@ -8,7 +8,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Biblioteca</title>
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="../style.css"/>
         <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/225/225993.png" type="image/x-icon">
     </head>
      <body class="fundo">
@@ -26,7 +26,7 @@
             </div>
         </header>
         <nav>
-            <a href="clientes.html">Clientes</a>
+            <a href="../pagesClientes/clientes.html">Clientes</a>
             <a href="livros.html" target="tela">Livros</a>
             <a href="emprestimos.html" target="tela">Emprestimos</a>
         </nav>

@@ -9,12 +9,12 @@
         <title>Validar Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="../style.css"/>
     </head>
     <body class="quadro">
         <%
             String usuario, senha;
-            //boolean abrir = false;
+            boolean abrir = false;
             Connection conn;
             PreparedStatement st;
             ResultSet resultado;
@@ -33,7 +33,7 @@
                 resultado = st.executeQuery();
                 if(resultado.next()){
                     //abrir = true;
-                    response.sendRedirect("restrito.jsp?nome=" + resultado.getString("nome"));
+                    response.sendRedirect("../JSPClientes/restrito.jsp?nome=" + resultado.getString("nome"));
                 } else {
                     out.print("<p class='resposta'>Usuário e/ou senha inválidos</p>");
                 }

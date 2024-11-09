@@ -9,7 +9,7 @@
         <title>Listar clientes</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="../style.css"/>
     </head>
     <body class="quadro">
         <%
@@ -34,8 +34,8 @@
                 <td><%= resultado.getString("nome") %></td>
                 <td><%= resultado.getString("telefone") %></td>
                 <td><%= resultado.getString("email") %></td>
-                <td><a href="excluir_clientes.jsp?codigo=<%= resultado.getString("id_clientes") %>">Excluir</a></td>
-                <td><a href="carrega_clientes.jsp?codigo=<%= resultado.getString("id_clientes") %>">Alterar</a></td>
+                <td><a href="../JSPClientes/excluir_clientes.jsp?codigo=<%= resultado.getString("id_clientes") %>">Excluir</a></td>
+                <td><a href="../JSPClientes/carrega_clientes.jsp?codigo=<%= resultado.getString("id_clientes") %>">Alterar</a></td>
             </tr>
         <%
                 }

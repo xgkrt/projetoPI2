@@ -9,7 +9,7 @@
         <title>Excluir clintes</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="../style.css"/>
     </head>
     <body class="quadro">
         <%
@@ -28,7 +28,7 @@
                 if (resultado == 0) {
                    out.print("<p class='resposta'>Este cliente não está cadastrado</p>");
                 } else {
-                   out.print("<pclass='resposta'>O cliente de codigo " + codigo + " foi excluído com sucesso.</p>");
+                   out.print("<p class='resposta'>O cliente de codigo " + codigo + " foi excluído com sucesso.</p>");
                 }
             } catch (Exception e){
                 out.print("Mensagem de erro: " + e.getMessage());

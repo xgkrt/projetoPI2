@@ -9,7 +9,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Carrega Clientes</title>
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="../style.css"/>
     </head>
     <body>
         <%
@@ -36,7 +36,7 @@
                 } else {
         %>
         <div>
-            <form method="post" action="alterar_clientes.jsp">
+            <form method="post" action="../JSPClientes/alterar_clientes.jsp">
                 <p>
                     <label for="codigo">Código:</label>
                     <input type="number" name="codigo" id="codigo" value="<%= resultado.getString("id_clientes")%>" readonly>
