@@ -14,7 +14,7 @@
     <body class="quadro">
         <%
             String usuario, senha;
-            boolean abrir = false;
+            //boolean abrir = false;
             Connection conn;
             PreparedStatement st;
             ResultSet resultado;
