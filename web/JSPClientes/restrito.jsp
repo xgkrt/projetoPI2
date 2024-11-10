@@ -28,13 +28,13 @@
         <nav>
             <a href="../pagesClientes/clientes.html">Clientes</a>
             <a href="../pagesLivros/livros.html">Livros</a>
-            <a href="emprestimos.html">Emprestimos</a>
+            <a href="../pagesEmprestimos/emprestimos.html">Emprestimos</a>
         </nav>
         <main>
             <img id="img" src="https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="alt"/>
         </main>
         <footer>
-            <p class="descricao">Desenvolvido por:<br>Lucas Morato Guedes<br>Nicolas Moreira Lima do Nascimento</p>
+            <p class="descricao">Desenvolvido por:<br>Lucas Guedes<br>Nicolas Moreira</p>
         </footer>
     </body>
 </html>

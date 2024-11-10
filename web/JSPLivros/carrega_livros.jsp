@@ -28,7 +28,7 @@
                 conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/biblioteca", "root", "");
                 st = conecta.prepareStatement("SELECT * FROM livros WHERE id_livros=?");
                 st.setString(1, codigo);
-
+                
                 ResultSet resultado = st.executeQuery();
 
                 if (!resultado.next()) {
