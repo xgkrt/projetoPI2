@@ -1,3 +1,4 @@
+drop database if exists biblioteca;
 create database Biblioteca;
 
 use Biblioteca;
@@ -28,6 +29,6 @@ create table Emprestimos (
     cliente_id int not null,
     data_emprestimo date not null,
     dat_devolucao date,
-    foreign key (livro_id) references Livros(id_livros),
-    foreign key (cliente_id) references Clientes(id_clientes)
+    foreign key (livro_id) references Livros(id_livros) on delete cascade,
+    foreign key (cliente_id) references Clientes(id_clientes) on delete cascade
 );
