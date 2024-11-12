@@ -6,8 +6,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Biblioteca</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../style.css"/>
         <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/225/225993.png" type="image/x-icon">
     </head>
@@ -31,7 +32,12 @@
             <a href="../pagesEmprestimos/emprestimos.html">Emprestimos</a>
         </nav>
         <main>
-            <img id="img" src="https://images.pexels.com/photos/2908984/pexels-photo-2908984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="alt"/>
+            <h1 class="txt-ini">Serviços <img class="ic1" src="https://cdn-icons-png.flaticon.com/512/225/225993.png" alt="alt"/></h1><br>
+            <ul>
+                <li>Cadastro de Clientes <img class="ic" src="https://cdn-icons-png.flaticon.com/128/33/33308.png" alt="alt"/></li><br>
+                <li>Livros <img class="ic" src="https://cdn-icons-png.flaticon.com/128/171/171322.png" alt="alt"/></li><br>
+                <li>Emprestimos <img class="ic" src="https://cdn-icons-png.flaticon.com/128/686/686348.png" alt="alt"/></li>
+            </ul>
         </main>
         <footer>
             <p class="descricao">Desenvolvido por:<br>Lucas Guedes<br>Nicolas Moreira</p>

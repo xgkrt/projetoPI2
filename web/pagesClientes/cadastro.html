@@ -1,28 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Cadastro do Site</title>
+        <title>Blibioteca</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../style.css"/>
+        <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/225/225993.png" type="image/x-icon">
     </head>
-    <body class="quadro">
-        <form method="post" action="../JSPClientes/cadastro_usuario.jsp">
-            <div>
-                <label for="u">Usuario</label>
-                <input id="u" type="text" name="usuario" maxlength="20">
+    <body class="fundo">
+        <header>
+            <div class="caixa">
+                <div class="caixa-texto">
+                    <p>Biblioteca</p>
+                </div>
+                <div class="logo">
+                    <img src="https://cdn-icons-png.flaticon.com/512/225/225993.png" alt="alt"/>
+                </div>
             </div>
-            <div>
-                <label for="s">Senha</label>
-                <input id="s" type="text" name="senha" maxlength="20">
-            </div>
-            <div>
-                <label for="n">Nome</label>
-                <input id="n" type="text" name="nome" maxlength="70" size="70">
-            </div>
-            <div>
-                <input type="submit" value="Salvar">
-            </div>
-        </form>
+        </header>
+        <nav>
+
+        </nav>
+        <main>
+            <form method="post" action="../JSPClientes/cadastro_usuario.jsp">
+                <div>
+                    <label for="u">Usuario</label>
+                    <input id="u" type="text" name="usuario" maxlength="20">
+                </div>
+                <div>
+                    <label for="s">Senha</label>
+                    <input id="s" type="text" name="senha" maxlength="20">
+                </div>
+                <div>
+                    <label for="n">Nome</label>
+                    <input id="n" type="text" name="nome" maxlength="70" size="70">
+                </div>
+                <div>
+                    <input type="submit" value="Salvar">
+                </div>
+            </form>
+        </main>
+        <footer>
+            <p class="descricao">Desenvolvido por:<br>Lucas Morato Guedes<br>Nicolas Moreira Lima do Nascimento</p>
+        </footer>
     </body>
 </html>
