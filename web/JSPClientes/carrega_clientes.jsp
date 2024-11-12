@@ -43,15 +43,15 @@
             </div>
             <div>
                 <label for="nome">Nome do Cliente:</label>
-                <input type="text" name="nome" id="nome" value="<%= resultado.getString("nome")%>" size="50" maxlength="50">
+                <input type="text" name="nome" id="nome" value="<%= resultado.getString("nome")%>" size="50" maxlength="100">
             </div>
             <div>
                 <label for="telefone">Telefone:</label>
-                <input type="text" name="telefone" id="telefone" value="<%= resultado.getString("telefone")%>" maxlength="50">
+                <input type="text" name="telefone" id="telefone" value="<%= resultado.getString("telefone")%>" maxlength="15">
             </div>
             <div>
                 <label for="email">Email:</label>
-                <input type="text" name="email" value="<%= resultado.getString("email")%>" id="email">
+                <input type="text" name="email" value="<%= resultado.getString("email")%>" id="email" maxlength="100">
             </div>
             <div>
                 <input type="submit" value="Salvar Alterações" class="submit-button">

@@ -23,7 +23,8 @@
                 + " date_format(emprestimos.data_emprestimo, '%d-%m-%Y'), "
                 + "date_format(emprestimos.dat_devolucao, '%d-%m-%Y') "
                 + "from emprestimos inner join livros on emprestimos.livro_id = livros.id_livros "
-                + "inner join clientes on emprestimos.cliente_id = clientes.id_clientes;");
+                + "inner join clientes on emprestimos.cliente_id = clientes.id_clientes"
+                + " order by emprestimos.ind_emprestimos;");
                 ResultSet resultado = st.executeQuery();
         %>
                 <table border="1">

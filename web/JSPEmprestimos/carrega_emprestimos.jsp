@@ -43,7 +43,7 @@
                     out.print("<p class='resposta'>Este livro não está cadastrado</p>");
                 } else {
         %>
-        <form method="post" action="../JSPEmprestimos/salvar_emprestimos.jsp">
+        <form method="post" action="../JSPEmprestimos/alterar_emprestimos.jsp">
             <div>
                 <label for="codigoEmpre" >Código do Emprestimo:</label>
                 <input type="number" name="codigoEmpre" id="codigoEmpre" value="<%= resultado.getString("ind_emprestimos")%>" readonly required>
