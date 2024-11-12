@@ -1,6 +1,6 @@
 <h1>Projeto CRUD - Sistema de Biblioteca</h1>
 <h3>Este repositório contém o código-fonte de um sistema CRUD desenvolvido como projeto acadêmico no curso de Análise e Desenvolvimento de Sistemas (ADS). </h3>
-<h3>O objetivo do projeto é criar um sistema de gerenciamento para uma biblioteca, onde é possível cadastrar, consultar, atualizar e deletar informações em quatro tabelas principais: usuário, clientes, livros e empréstimos.</h3>
+<h3>O objetivo do projeto é criar o meu primeiro sistema de gerenciamento para uma biblioteca, onde é possível cadastrar, consultar, atualizar e deletar informações em quatro tabelas principais: usuário, clientes, livros e empréstimos.</h3>
 
 > Status do Projeto: Desenvolvimento.
 
