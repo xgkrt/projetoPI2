@@ -4,13 +4,13 @@
 <%@page import="java.sql.ResultSet" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Salvar livros</title>
         <link rel="stylesheet" href="../style.css"/>
     </head>
-    <body>
+    <body class="quadro">
         <%
             int codigo;
             String titulo, autor, genero;
@@ -43,5 +43,8 @@
                 }
             }
         %>
+        <div class="voltar">
+            <a href="../pagesLivros/cadastro_livros.html">Voltar</a>
+        </div>
     </body>
 </html>

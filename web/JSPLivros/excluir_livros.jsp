@@ -34,5 +34,8 @@
                 out.print("Mensagem de erro: " + e.getMessage());
             }
         %>
+        <div class="voltar">
+            <a href="../pagesLivros/excluir_livros.html">Voltar</a>
+        </div>
     </body>
 </html>

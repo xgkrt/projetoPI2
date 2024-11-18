@@ -34,5 +34,8 @@
                 out.print("Mensagem de erro: " + e.getMessage());
             }
         %>
+        <div class="voltar">
+            <a href="excluir_emprestimos.jsp">Voltar</a>
+        </div>
     </body>
 </html>

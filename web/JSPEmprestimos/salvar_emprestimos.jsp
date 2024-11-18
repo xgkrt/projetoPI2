@@ -6,13 +6,13 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Salvar emprestimos</title>
         <link rel="stylesheet" href="../style.css"/>
     </head>
-    <body>
+    <body class="quadro">
         <%
             int codigo;
             String idLivro, idCliente, dataEmpreStr, dataDevoStr;
@@ -38,15 +38,18 @@
                 st.setString(5, dataDevoStr);
                 st.executeUpdate();
 
-                out.print("<p class='resposta'>Livro cadastrado com sucesso</p>");
+                out.print("<p class='resposta'>Emprestimo efetuado com sucesso</p>");
             } catch (Exception x) {
                 String error = x.getMessage();
                 if (error.contains("Duplicate entry")) {
-                    out.print("<p class='resposta'>Este livro já está cadastrado</p>");
+                    out.print("<p class='resposta'>Este emprestimo já está efetuado</p>");
                 } else {
                     out.print("<p class='resposta'>Mensagem de erro: " + x.getMessage() + "</p>");
                 }
             }
         %>
+        <div class="voltar">
+            <a href="cadastro_emprestimos.jsp">Voltar</a>
+        </div>
     </body>
 </html>

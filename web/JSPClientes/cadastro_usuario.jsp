@@ -24,6 +24,9 @@
                 </div>
             </div>
         </header>
+        <nav>
+            
+        </nav>
         <main>
             <%
                 String u, s, n;

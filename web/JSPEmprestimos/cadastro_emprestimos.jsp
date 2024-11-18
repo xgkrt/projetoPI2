@@ -20,7 +20,7 @@
 
                 st = conecta.prepareStatement("SELECT nome, id_clientes FROM clientes ORDER BY nome");
                 ResultSet resultado = st.executeQuery();
-                
+
                 st2 = conecta.prepareStatement("SELECT titulo, id_livros FROM livros ORDER BY titulo");
                 ResultSet resultado2 = st2.executeQuery();
         %>
@@ -33,13 +33,13 @@
                 <div  class="inputs">
                     <label for="titulo" >Titulo do Livro:</label>
                     <select name="titulo" id="titulo">
-        <%
-                while (resultado2.next()) {                        
-        %>
-                        <option value="<%=resultado2.getString("id_livros")%>"><%= resultado2.getString("titulo") %></option>
-        <%
-                }
-        %>
+                        <%
+                            while (resultado2.next()) {
+                        %>
+                        <option value="<%=resultado2.getString("id_livros")%>"><%= resultado2.getString("titulo")%></option>
+                        <%
+                            }
+                        %>
                     </select>
                 </div>
             </div>
@@ -47,13 +47,13 @@
                 <div  class="inputs">
                     <label for="nome" >Nome do Cliente:</label>
                     <select name="nome" id="nome">
-        <%
-                while (resultado.next()) {                        
-        %>
-                        <option value="<%=resultado.getString("id_clientes")%>"><%= resultado.getString("nome") %></option>
-        <%
-                }
-        %>
+                        <%
+                            while (resultado.next()) {
+                        %>
+                        <option value="<%=resultado.getString("id_clientes")%>"><%= resultado.getString("nome")%></option>
+                        <%
+                            }
+                        %>
                     </select>
                 </div>
             </div>
@@ -69,8 +69,8 @@
                 <input type="submit" value="Salvar">
             </div>
         </form>
-         <%        
-            } catch(Exception e){
+        <%
+            } catch (Exception e) {
                 out.print("Mensagem de erro: " + e.getMessage());
             }
         %>

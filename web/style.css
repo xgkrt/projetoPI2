@@ -130,7 +130,9 @@ label {
     font-weight: bold;
 }
 
-input[type="text"], input[type="password"], input[type="number"]  {
+input[type="text"], input[type="password"], 
+input[type="number"], input[type="date"], 
+select {
     width: 100%;
     padding: 10px;
     border: 1px solid #cccccc;

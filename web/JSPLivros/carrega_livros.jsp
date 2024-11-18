@@ -5,13 +5,13 @@
 <%@page import="java.util.Enumeration" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Carrega livros</title>
         <link rel="stylesheet" href="../style.css"/>
     </head>
-    <body>
+    <body class="quadro">
         <%
             String codigo = request.getParameter("codigo");
             //out.println("<p>Valor do código recebido: " + codigo + "</p>");
